@@ -18,6 +18,10 @@ cd path/to/project/directory
 go run main.go
 ```
 
+or
+
+[![Run Project](https://img.shields.io/badge/Run-Project-blue)](https://ascii-art-web.onrender.com)
+
 The server will start on port 8080. Access it in your web browser by visiting http://localhost:8080/.
 
 ## Usage 📟
