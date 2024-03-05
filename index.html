@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <!-- <style media="screen"></style> -->
+  <body>
+    <header>
+      <br />
+      <br />
+      <h1>(A)(S)(C)(I)(I) Art</h1>
+      <br />
+      <!-- <h1>Art Generator</h1> -->
+    </header>
+    <div class="container">
+      <div id="form-container">
+        <form method="post" action="/ascii-art">
+          <label for="input"></label>
+          <textarea
+            rows="5"
+            cols="40"
+            name="input"
+            placeholder="Enter text"
+            style="text-align: center"
+          ></textarea>
+          <br />
+          <input
+            type="radio"
+            id="filename1"
+            name="filename"
+            value="standard"
+            checked
+          />
+          <label for="filename1">Standard</label>
+          <input
+            type="radio"
+            id="filename2"
+            name="filename"
+            value="thinkertoy"
+          />
+          <label for="filename2">Thinkertoy</label>
+          <input type="radio" id="filename3" name="filename" value="shadow" />
+          <label for="filename3">Shadow</label>
+          <br />
+          <br />
+          <div class="button-row">
+            <input type="submit" value="Submit" />
+            <a href="/download?ascii={{ .ASCIIArt }}" class="btn-download"
+              >Download</a
+            >
+          </div>
+        </form>
+      </div>
+      <br />
+      <div id="ascii-art-container">
+        <pre>{{ .ASCIIArt }}</pre>
+      </div>
+      <img src="/images/goworkout.gif" alt="GOLPERS" class="image" />
+      <p style="font-style: italic">powered by golang</p>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("info").innerHTML = Date();
+      }
+    </script>
+    <footer>
+      <br />
+      <a
+        href="https://www.facebook.com/tania.rosa.1213"
+        class="fa fa-facebook"
+      ></a>
+      <a href="https://twitter.com/home?lang=en-gb" class="fa fa-twitter"></a>
+      <a
+        href="https://www.linkedin.com/in/tania-rosa-99503b36/"
+        class="fa fa-linkedin"
+      ></a>
+      <a href="https://github.com/Pinkish-Warrior" class="fa fa-github"></a>
+      <br />
+      <p>Tania Rosa Santana © 2023</p>
+      <p id="info"></p>
+      <button type="button" class="btn" onclick="myFunction()">
+        Keep calm & carry on CODING
+      </button>
+      <br />
+    </footer>
+  </body>
+</html>

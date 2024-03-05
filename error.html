@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Error</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h1>Sorry, we have run to an Error</h1>
+    <h1>Keep Calm and carry on, it was just a: {{ .Message }}</h1>
+    <div class="error">
+      <img src="{{ .GIFPath }}" alt="Error GIF" />
+    </div>
+    <p style="font-style: italic; text-align: center">powered by golang</p>
+  </body>
+</html>
